@@ -1,0 +1,14 @@
+
+.Nav-Type{
+      display: flex;
+      justify-content: center;
+      
+}
+
+*{
+    font-family:"Sarabun"; 
+}
+
+.modal{
+    z-index: 2000;
+}

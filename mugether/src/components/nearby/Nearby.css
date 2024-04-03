@@ -1,0 +1,32 @@
+.Card{
+   
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding:10px;
+    height: 400px;
+    width: 100%;
+}
+
+  .Card img {
+     width: 100%;
+     object-fit: cover;
+     border-radius: 20px;
+     cursor: pointer;
+    
+  }
+
+.Card p  {
+    margin: 0; 
+    white-space: normal; 
+    overflow: hidden; 
+    line-height: 1.2; 
+    max-height: 2.4em; 
+}
+
+.Card h6{
+    margin: 0; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

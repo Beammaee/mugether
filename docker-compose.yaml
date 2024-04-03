@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  mongodb:
+     image: "mongo"
+     volumes:
+      - data:/data/db
+  backend:
+    build: ./server-2
+    ports:
+      - "5353:5353"
+    volumes:
+      - ./server-2:/usr/src/app
+      - /usr/src/app/node_modules/
+  
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./mugether
+    ports:
+      - "5173:5173"  
+    volumes:
+      - ./mugether:/app
+      - /app/node_modules
+      - /app/build
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+volumes:
+  data: {}
+  src: {}
+
+
+   
+       
+
